@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.side-menu 
+{
+position: fixed;
+top: 0;
+left: 0;
+width: 200px;
+height: 100%;
+background-color: white;
+color: black;
+display: flex;
+flex-direction: column;
+padding: 10px;
+box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+visibility: hidden;
+opacity: 0;
+transform: translateX(-200px);
+transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+}
+
+.side-menu.open 
+{ 
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu-toggle 
+{
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-toggle:hover {color: red;}
+
+.side-menu h2 
+{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: black;
+}
+
+.side-menu a 
+{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.side-menu a:hover 
+{
+    background-color: #575757;
+}
+header 
+{
+    display: flex;
+    background-color: #efe0e0;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    height:70px;
+    justify-content: space-between;
+}
+header img 
+{
+    display: block;
+    width: 80%;
+    height: 40px;
+    margin: 10px 10px;
+}
+.imgacc
+{
+    margin-left: auto;
+    width: 100px;
+}
+header .logo
+{
+    display: flex;
+    margin-top: 5px;
+    width: 40%;
+}
+.tb {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+}
+  
+
+.taikhoan
+{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+header ul.taikhoan>li{
+    position: relative;
+}
+header ul.taikhoan>li>ul.dangxuat
+{
+    position:absolute;
+    background-color: #cccccc50;
+    top: 50px;
+    width: 80px;
+    left: 15px;
+    list-style: none;
+    display: none;
+    text-decoration:none;
+
+}
+header ul.taikhoan>li:hover>ul
+{
+    display: block;
+} 
+
+header ul.taikhoan > li > ul.dangxuat a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    display: block; /* Đảm bảo rằng toàn bộ dòng là vùng click */
+}
+
+header ul.taikhoan > li > ul.dangxuat a:hover {
+    background-color: #cccccc50;
+    color:rgb(218, 15, 15);
+}
+
+header ul.taikhoan > li > ul.note a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+     display : block;/* Đảm bảo rằng toàn bộ dòng là vùng click */
+    margin-right:100px;
+    width:100px;
+    right:15px;
+} 
+
+header ul.taikhoan>li>ul.note
+{
+    position:absolute;
+    background-color: #ccccccb0;
+    top: 30px;
+    width: 150px;
+    right:20px;
+    list-style: none;
+    display: none;
+    text-decoration:none;
+    white-space: nowrap;
+    
+}
+header ul.taikhoan>li:hover>ul.note
+{
+    display: block;
+} 
+
+header ul.taikhoan > li > ul.note a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    display: block; /* Đảm bảo rằng toàn bộ dòng là vùng click */
+}
+  
+body h2
+{
+    text-align: center;
+    font-size: 50px;
+    margin: 10px;
+}
+.bangnhanvien
+{
+    margin: 10px auto auto 20px;
+}
+/*
+.bangthongtin th, .bangnhanvien td
+{
+    text-align: left;
+    padding: 10px;
+}
+.bangthongtin tr
+{
+    margin: 20px;
+    padding: 10px;
+}
+    */
+    .bangthongtin input:focus,
+    .bangthongtin select:focus,
+    .bangthongtin textarea:focus {
+        border-color: #4CAF50;
+        box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+    }
+    
+/* Bảng thông tin */
+.bangthongtin {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9; /* Nền sáng nhẹ */
+    border: 1px solid #ddd; /* Viền bảng */
+    border-radius: 10px; /* Bo góc bảng */
+    overflow: hidden;
+}
+
+.bangthongtin input,
+.bangthongtin select,
+.bangthongtin textarea {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.update{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin:10px 500px;
+    width:140px;
+    Height: 40px;
+    text-align:center;
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+}
+input[type="submit"]:hover {
+    background-color: #5a5a5a;
+}
+form[action="upload.php"] {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Khoảng cách giữa các phần tử */
+    justify-content: center;
+    align-items: center;
+}
+
+.them {
+    position: absolute; /* Sử dụng để định vị */
+    left:50%; /* Cách trái 50% chiều rộng màn hình */
+    transform: translate(-50%, -50%); /* Căn chỉnh chính xác vào giữa */
+    margin: 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+
+}
